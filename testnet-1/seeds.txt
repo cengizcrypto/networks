@@ -1,0 +1,1 @@
+b825e8d944952e50afe5739fa4afa7cb16f11db9@seed-0-p2p.testnet-1.allora.network:32110,cc11f2c02f9dea5f3b86eec3e00ae373b7076ea4@seed-1-p2p.testnet-1.allora.network:32111,9b1cdf7947dcd5e15bec361c38c55f033658003b@seed-2-p2p.testnet-1.allora.network:32112
