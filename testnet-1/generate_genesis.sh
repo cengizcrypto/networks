@@ -99,10 +99,10 @@ for ((i=0; i<$VALIDATOR_NUMBER; i++)); do
     $allorad --home=$valHome init $valName --chain-id $CHAIN_ID --default-denom ${DENOM}
 
     # Symlink genesis to have the accounts
-    ln -sfr $genesisHome/config/genesis.json $valHome/config/genesis.json
+    gln -sfr $genesisHome/config/genesis.json $valHome/config/genesis.json
 
     # Symlink keyring-test to have keys
-    ln -sfr $genesisHome/keyring-test $valHome/keyring-test
+    gln -sfr $genesisHome/keyring-test $valHome/keyring-test
 
     $allorad --home=$valHome genesis gentx $valName ${VALIDATOR_TOKENS}${DENOM} \
         --chain-id $CHAIN_ID --keyring-backend $keyringBackend \
