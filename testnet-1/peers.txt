@@ -1,0 +1,1 @@
+11413d234e449ff3fefbad2df285a9b2b2601e0d@peer-0.testnet-1.testnet.allora.network:32120,89ec173c61da9b32c7344aacfe72cc62e0b743a0@peer-1.testnet-1.testnet.allora.network:32121
