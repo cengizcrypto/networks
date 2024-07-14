@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eu
 
-CHAIN_ID="testnet-1"
+CHAIN_ID="allora-testnet-1"
 VALIDATOR_NUMBER=${VALIDATOR_NUMBER:-3}       #! Used in save_keys_awssecretsmanager.sh
 
 DENOM="uallo"
@@ -99,10 +99,10 @@ for ((i=0; i<$VALIDATOR_NUMBER; i++)); do
     $allorad --home=$valHome init $valName --chain-id $CHAIN_ID --default-denom ${DENOM}
 
     # Symlink genesis to have the accounts
-    gln -sfr $genesisHome/config/genesis.json $valHome/config/genesis.json
+    ln -sfr $genesisHome/config/genesis.json $valHome/config/genesis.json
 
     # Symlink keyring-test to have keys
-    gln -sfr $genesisHome/keyring-test $valHome/keyring-test
+    ln -sfr $genesisHome/keyring-test $valHome/keyring-test
 
     $allorad --home=$valHome genesis gentx $valName ${VALIDATOR_TOKENS}${DENOM} \
         --chain-id $CHAIN_ID --keyring-backend $keyringBackend \
